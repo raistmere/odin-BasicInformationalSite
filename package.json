@@ -1,0 +1,12 @@
+{
+  "name": "odin-basicinformationalsite",
+  "version": "1.0.0",
+  "description": "The Odin Project - Project: Basic Informational Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
