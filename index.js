@@ -9,9 +9,9 @@ const myServer = http.createServer((req, res) => {
     const filePath = path.join(__dirname, "public", req.url === "/"? "index" : req.url);
     const extname = path.extname(filePath) === ""? ".html" : "";
 
-    console.log("Path: ", filePath)
-    console.log("Ext: ", extname);
-    console.log("file: ", path.parse(filePath));
+    // console.log("Path: ", filePath)
+    // console.log("Ext: ", extname);
+    // console.log("file: ", path.parse(filePath));
 
     let contentType = "text/html";
 
@@ -24,10 +24,12 @@ const myServer = http.createServer((req, res) => {
         default:
             break;
     }
-    console.log("Content Type: ", contentType);
+
+    // console.log("Content Type: ", contentType);
 
     fs.readFile(`${filePath}${extname}`, (err, content) => {
-        console.log("Reading File: ", `${filePath}${extname}`);
+        // console.log("Reading File: ", `${filePath}${extname}`);
+
         // Failure request
         if(err) { 
             if(err.code === "ENOENT") {
